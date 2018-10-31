@@ -1,0 +1,21 @@
+<h1 style="color: darkcyan">
+  Cadastro de Veiculo 
+</h1>
+
+ <label>Placa:
+    <input [(ngModel)]="veiculo.placa" name="veiculo.placa"> <br>
+  <label>Ano:
+    <input [(ngModel)]="veiculo.ano"><br>
+    <label>Fabricante:
+      <select [(ngModel)]="veiculo.modelodto.fabricantedto.id" (ngModelChange)="carregaModelo()">
+          <option value="undefined">Selecione</option>
+          <option value="{{item.id}}" *ngFor="let item of fabricantes">{{item.nome}} </option><br>
+      </select><br>  
+  <label>Modelo:
+    <select [(ngModel)]="veiculo.modelodto.id" >
+        <option value="undefined">Selecione</option>
+        <option value="{{item.id}}" *ngFor="let item of modelos">{{item.nome}} </option><br>
+    </select><br>
+
+  
+  <button (click)="salvar()">Salvar</button>

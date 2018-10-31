@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>Placa</th>
+      <th>Ano</th>
+      <th>Modelo</th>
+      <th>Fabricante</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let item of veiculos">
+        <td>{{item.placa}}</td>
+        <td>{{item.ano}}</td>
+        <td>{{item.modelodto.nome}}</td>
+        <td>{{item.modelodto.fabricantedto.nome}}</td>
+    </tr>
+  </tbody>
+</table>
